@@ -9,7 +9,7 @@
     
   }
   .back{
-    background-image: url(bg1.jpg);
+    background-image: url(BG2.avif);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -24,7 +24,7 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
     /* margin: 20px auto; */
     padding: 20px;
     /* max-width: 400px; */
