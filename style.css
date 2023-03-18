@@ -5,7 +5,7 @@
     font-family: Arial, sans-serif;
     /* justify-content: center;
     align-items: center;   */
-    /* see */
+    margin: 0;
     
   }
   .back{
@@ -29,7 +29,7 @@
     padding: 20px;
     /* max-width: 400px; */
     width: 450px;
-    height:350px
+    height:400px
   }
   
   h1 {
