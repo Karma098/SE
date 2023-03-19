@@ -4,6 +4,8 @@ $a=$_POST['username'];
 $b=$_POST['full_name'];
 $c=$_POST['email'];
 $d=$_POST['password'];
+$e=$_POST['img'];
+$f=$_POST['phone'];
 
 
 $con=mysqli_connect("localhost","root","","social_site");
@@ -78,7 +80,7 @@ function sendMail($c,$v_code){
     else{
         $password=password_hash($d,PASSWORD_BCRYPT);
         $v_code=bin2hex(random_bytes(16));
-        $query="INSERT INTO `user`(`Username`, `Full_Name`, `Email`, `Password`, `verification_code`, `is_verified`) VALUES ('$a','$b','$c','$password','$v_code','0')";
+        $query="INSERT INTO `user`(`Username`, `Full_Name`, `Email`, `Password`, `verification_code`, `is_verified`, `image`, `mobile`) VALUES ('$a','$b','$c','$password','$v_code','0','$e','$f')";
         if(mysqli_query($con,$query) && sendMail($c,$v_code)){
             echo"
                 <script>
@@ -90,7 +92,7 @@ function sendMail($c,$v_code){
         else{
             echo"
                 <script>
-                alert('Server Down');
+                alert('Wrong Email');
                 window.location.href='index.php';
                 </script>
             ";

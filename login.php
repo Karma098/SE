@@ -23,6 +23,9 @@ session_start();
             if(password_verify($b,$result_fetch['Password'])){
               $_SESSION['logged_in']=true;
               $_SESSION['username']=$result_fetch['Username'];
+              $_SESSION['email']=$result_fetch['Email'];
+              $_SESSION['img']=$result_fetch['image'];
+              $_SESSION['phone']=$result_fetch['mobile'];
               header("location: profile.php");
             }
             else{

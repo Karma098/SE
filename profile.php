@@ -14,15 +14,48 @@
 <body>
     <div class="container">
         <div class="profile">
-            <img src="profile-pic.jpg" alt="Profile Picture">
-            <h1>Jane Doe</h1>
-            <h3>Web Developer</h3>
+            <img src=
+            
+            <?php
+              if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
+                echo"$_SESSION[img]";
+              }
+            ?>
+            
+            alt="Profile Picture">
+            <h1>
+
+            <?php
+              if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
+                echo"$_SESSION[username]";
+              }
+            ?>
+
+            </h1>
+            <h3>Scheme</h3>
             <hr>
             <p></p>
             <ul>
-                <li><strong>Email:</strong> jane.doe@example.com</li>
-                <li><strong>Phone:</strong> (123) 456-7890</li>
-                <li><strong>Website:</strong> www.janedoe.com</li>
+                <li><strong>Email:</strong>
+                
+                <?php
+                    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
+                        echo"$_SESSION[email]";
+                    }
+                ?>
+
+                </li>
+                <li><strong>Phone:</strong> 
+                
+                <?php
+                    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
+                        echo"$_SESSION[phone]";
+                    }
+                ?>
+                
+                </li>
+                
+                <a href="index.php">Logout</a>
             </ul>
         </div>
     </div>
