@@ -1,3 +1,9 @@
+<?php
+  require('connection.php');
+  session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +16,8 @@
     <div class="container">
       <h1>Login</h1>
       <form method="POST" action="login.php">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required name="username">
+        <label for="email">E-Mail:</label>
+        <input type="text" id="email" name="email" required name="email">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required name="password">
         <button type="submit" name="login">Login</button>
@@ -20,6 +26,7 @@
       <a href="#">Forgot Password?</a>
     </div>
   </div>
+
 </body>
 
 </html>

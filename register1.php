@@ -5,10 +5,50 @@ $b=$_POST['full_name'];
 $c=$_POST['email'];
 $d=$_POST['password'];
 
+
 $con=mysqli_connect("localhost","root","","social_site");
 if(mysqli_connect_error()){
     echo"<script>alert('cannot connect to database');</script>";
     exit();
+}
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+function sendMail($c,$v_code){
+    require ("PHPMailer/PHPMailer.php");
+    require ("PHPMailer/SMTP.php");
+    require ("PHPMailer/Exception.php");
+    $mail = new PHPMailer(true);
+
+    try {                    //Enable verbose debug output
+        $mail->isSMTP();                                            //Send using SMTP
+        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->Username   = 'akabanek193@gmail.com';                     //SMTP username
+        $mail->Password   = 'ztpjxghykubgkrbo';                                //SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    
+        $mail->setFrom('akabanek193@gmail.com', 'Karma');
+        $mail->addAddress($c);    
+       
+        
+
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'Email Verification from Server';
+        $mail->Body    = "Thanks for registration!
+        Click the link below to verify the email address
+        <a href='http://localhost/SE/verify.php?email=$c&v_code=$v_code'>Verify</a>";
+        
+    
+        $mail->send();
+        return true;
+    } 
+    catch (Exception $e) {
+       return false;
+    }
 }
 
     $user_exist_query="SELECT * FROM user WHERE Username='$a' OR Email='$c'";
@@ -37,20 +77,21 @@ if(mysqli_connect_error()){
     }
     else{
         $password=password_hash($d,PASSWORD_BCRYPT);
-        $query="INSERT INTO `user`(`Username`, `Full_Name`, `Email`, `Password`) VALUES ('$a','$b','$c','$password')";
-        if(mysqli_query($con,$query)){
+        $v_code=bin2hex(random_bytes(16));
+        $query="INSERT INTO `user`(`Username`, `Full_Name`, `Email`, `Password`, `verification_code`, `is_verified`) VALUES ('$a','$b','$c','$password','$v_code','0')";
+        if(mysqli_query($con,$query) && sendMail($c,$v_code)){
             echo"
                 <script>
-                alert('Registered successfully');
-                window.location.href='index.html';
+                alert('Registered successfully Please verify from your email');
+                window.location.href='index.php';
                 </script>
             ";
         }
         else{
             echo"
                 <script>
-                alert('Cannot Run Query1');
-                window.location.href='index.html';
+                alert('Server Down');
+                window.location.href='index.php';
                 </script>
             ";
         }
