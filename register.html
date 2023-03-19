@@ -7,11 +7,15 @@
 </head>
 <body>
   <div class="container">
-    <form action="#" method="post">
+    <form method="POST" action="register1.php" >
       <h2>Register</h2>
       <div class="form-group">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="full_name">Full_Name</label>
+        <input type="text" id="full_name" name="full_name" required>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
@@ -26,7 +30,7 @@
         <input type="password" id="confirm-password" name="confirm-password" required>
       </div>
       <div class="form-group">
-        <button type="submit">Register</button>
+        <button type="submit" name="register">Register</button>
       </div>
     </form>
   </div>
