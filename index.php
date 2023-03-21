@@ -23,7 +23,7 @@
         <button type="submit" name="login">Login</button>
       </form><br>
       <p>New user? <a href="register.html">Create an account</a></p>
-      <a href="#">Forgot Password?</a>
+      <a href="forget.html">Forgot Password?</a>
     </div>
   </div>
 
