@@ -2,12 +2,20 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+   
   }
   
   body {
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
-  
+    
+  }
+  .back{
+    background-image: url(BG2.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
   }
   
   .container {
@@ -17,12 +25,14 @@
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    
+    margin-top: 290px;
+    height: 300px;
   }
   
   h2{
     text-align: center;
   justify-content: center;
+  margin-bottom: 10px;
   }
   .form-group {
     margin-bottom: 10px;
@@ -40,18 +50,21 @@
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 16px;
+    margin-top: 10px;
   }
   
   button.btn {
     display: block;
     margin: 10px 0 0 auto;
     padding: 10px 20px;
-    background-color: #4caf50;
+    background-color: #1077cf;
     color: #fff;
     border: none;
     border-radius: 3px;
     font-size: 16px;
     cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
   }
   
   button.btn:hover {

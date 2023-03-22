@@ -56,6 +56,14 @@ session_start();
             ";
         }
     }
+    else{
+      echo"
+          <script>
+            alert('Email not registered');
+            window.location.href='index.php';
+          </script>
+        ";
+    }
 // }
 
 ?>
