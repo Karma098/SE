@@ -6,21 +6,28 @@
     <meta name="keywords" content="forgot password page, basic html and css">
     <title>Forgot Password Page - HTML + CSS</title>
     <link rel="stylesheet" type="text/css" href="forget.css">
-    </head>
-    <body>
-        <form method="POST" action="forgetphp.php" >
-    <div class="row">
-    <h1>Forgot Password</h1>
-    <h6 class="information-text">Enter your registered email to reset your password.</h6>
-    <div class="form-group">
-    <input type="email" name="email" id="email">
-    <p><label for="email">Email</label></p>
-    <button onclick="showSpinner()">Reset Password</button>
+</head>
+
+<body>
+    <div class="back">
+        <div class="container">
+            <form method="POST" action="forgetphp.php">
+                <div class="row">
+                    <h1 class="fph1">Forgot Password</h1>
+                    <!-- <h6 class="information-text">Enter your registered email to reset your password.</h6> -->
+                    <div class="form-group">
+                        <p class="email"><label for="email">Email</label></p>
+                        <input type="email" name="email" id="email">
+                       <br><button class="reset" onclick="showSpinner()">Reset Password</button>
+                    </div>
+                    <div class="footer">
+                        <p class="newu">New here? <a href="register.html">Sign Up.</a></p>
+                        <p>Already have an account? <a href="index.php">Sign In.</a></p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
     </div>
-    <div class="footer">
-    <h5>New here? <a href="register.html">Sign Up.</a></h5>
-    <h5>Already have an account? <a href="index.php">Sign In.</a></h5>
-    </div>
-</form>
-    </div>
-    </body>
+
+</body>

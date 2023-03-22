@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,10 +12,82 @@
     text-rendering: optimizeLegibility;
     /* -moz-font-feature-settings: "liga" on; */
     /* border: #000; */
-    border: 1px solid #090909;
+    /* border: 1px solid #090909; */
+* {
+  box-sizing: border-box;
 }
+body {
+  font-family: Arial, sans-serif;
+  /* justify-content: center;
+  align-items: center;   */
+  margin: 0;
   
-  .row {
+}
+.fph1{
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.back{
+  background-image: url(BG2.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform : translate(-50% , -50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+  /* margin: 20px auto; */
+  padding: 20px;
+  /* max-width: 400px; */
+  width: 450px;
+  height:380px;
+
+}
+.email{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+  input[type="email"] {
+    width: 100%;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    /* margin-top: 0 !important; */
+    padding: 10px;
+  }
+  .reset {
+    background-color: #1077cf;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .reset:hover {
+    background-color: #3e8e41;
+  }
+  .newu{
+    font-family: Arial, sans-serif;
+  }
+  
+  /* .row {
     background-color: rgba(20, 120, 200, 0.6);
     color: #fff;
     text-align: center;
@@ -79,9 +151,9 @@
         color: #444; }
     .row .footer a {
       color: inherit;
-      text-decoration: none; }
+      text-decoration: none; } */
   
-  .information-text {
+  /* .information-text {
     color: #ddd; }
   
   @media screen and (max-width: 320px) {
@@ -93,5 +165,5 @@
   @media screen and (min-width: 900px) {
     .row {
       width: 50%; } }
-  
+   */
   

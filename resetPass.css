@@ -7,6 +7,7 @@
   body {
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
+  
   }
   
   .container {
@@ -16,8 +17,13 @@
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
   }
   
+  h2{
+    text-align: center;
+  justify-content: center;
+  }
   .form-group {
     margin-bottom: 10px;
   }
