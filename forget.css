@@ -27,9 +27,10 @@ body {
   text-align: center;
   justify-content: center;
   margin-bottom: 40px;
+  color: white;
 }
 .back{
-  background-image: url(BG2.avif);
+  background-image: url(background6.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -48,6 +49,7 @@ body {
   /* margin: 20px auto; */
   padding: 20px;
   /* max-width: 400px; */
+  background: transparent;
   width: 450px;
   height:380px;
 
@@ -55,6 +57,7 @@ body {
 .email{
   font-size: 20px;
   margin-bottom: 10px;
+  color: white;
 }
 
   input[type="email"] {
@@ -66,6 +69,8 @@ body {
     margin-bottom: 20px;
     /* margin-top: 0 !important; */
     padding: 10px;
+    color: white;
+    background: transparent;
   }
   .reset {
     background-color: #1077cf;
@@ -85,6 +90,7 @@ body {
   }
   .newu{
     font-family: Arial, sans-serif;
+    color: white;
   }
   
   /* .row {

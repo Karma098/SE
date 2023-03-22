@@ -32,7 +32,7 @@ session_start();
               echo"
                 <script>
                   alert('password wrong');
-                  window.location.href='index.php';
+                  window.location.href='index.html';
                 </script>
               ";
             } 
@@ -41,7 +41,7 @@ session_start();
             echo"
               <script>
                 alert('Email not verified');
-                window.location.href='index.php';
+                window.location.href='index.html';
               </script>
             ";
           }
@@ -51,7 +51,7 @@ session_start();
           echo"
               <script>
                 alert('Email not registered');
-                window.location.href='index.php';
+                window.location.href='index.html';
               </script>
             ";
         }
@@ -60,7 +60,7 @@ session_start();
       echo"
           <script>
             alert('Email not registered');
-            window.location.href='index.php';
+            window.location.href='index.html';
           </script>
         ";
     }

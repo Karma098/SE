@@ -28,7 +28,7 @@ function sendMail($c){
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
-        $mail->setFrom('akabanek193@gmail.com', 'Karma');
+        $mail->setFrom('akabanek193@gmail.com', 'Social Site');
         $mail->addAddress($c);    
        
         
@@ -59,7 +59,7 @@ if(mysqli_num_rows($result)){
         echo"
         <script>
             alert('see your email');
-            window.location.href='index.php';
+            window.location.href='index.html';
         </script>
     ";         
     }
@@ -68,7 +68,7 @@ if(mysqli_num_rows($result)){
         echo"
         <script>
             alert('E-mail does not exist');
-            window.location.href='index.php';
+            window.location.href='index.html';
         </script>
     ";
     }

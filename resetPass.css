@@ -11,7 +11,7 @@
     
   }
   .back{
-    background-image: url(BG2.avif);
+    background-image: url(background6.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -19,20 +19,25 @@
   }
   
   .container {
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: transparent;
+    transform : translate(-50% , -50%);
+    /* background-color: #fff; */
+    border: 3px solid #f5efef;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-top: 290px;
-    height: 300px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    /* margin: 20px auto; */
+    padding: 20px;
+    width: 450px;
   }
   
   h2{
     text-align: center;
   justify-content: center;
   margin-bottom: 10px;
+  color: white;
   }
   .form-group {
     margin-bottom: 10px;
@@ -41,6 +46,7 @@
   label {
     display: block;
     margin-bottom: 5px;
+    color: white;
   }
   
   input[type="email"],
@@ -51,6 +57,8 @@
     border-radius: 3px;
     font-size: 16px;
     margin-top: 10px;
+    color: white;
+    background: transparent;
   }
   
   button.btn {

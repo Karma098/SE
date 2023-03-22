@@ -55,7 +55,7 @@
                 
                 </li>
                 
-                <a href="index.php">Logout</a>
+                <a href="index.html">Logout</a>
             </ul>
         </div>
     </div>

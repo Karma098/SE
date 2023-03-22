@@ -85,7 +85,7 @@ function sendMail($c,$v_code){
             echo"
                 <script>
                 alert('Registered successfully Please verify from your email');
-                window.location.href='index.php';
+                window.location.href='index.html';
                 </script>
             ";
         }
@@ -93,7 +93,7 @@ function sendMail($c,$v_code){
             echo"
                 <script>
                 alert('Wrong Email');
-                window.location.href='index.php';
+                window.location.href='index.html';
                 </script>
             ";
         }

@@ -22,7 +22,7 @@ if(mysqli_num_rows($result)){
             echo"
                 <script>
                     alert('Password changed successfully');
-                    window.location.href='index.php';
+                    window.location.href='index.html';
                 </script>
             ";
         }
@@ -30,7 +30,7 @@ if(mysqli_num_rows($result)){
             echo"
                 <script>
                     alert('cannot run query');
-                    window.location.href='index.php';
+                    window.location.href='index.html';
                 </script>
             ";
         }    
@@ -40,7 +40,7 @@ if(mysqli_num_rows($result)){
         echo"
         <script>
             alert('E-mail does not exist');
-            window.location.href='index.php';
+            window.location.href='index.html';
         </script>
     ";
     }

@@ -17,7 +17,7 @@
                     echo"
                         <script>
                             alert('Email verification successful');
-                            window.location.href='index.php';
+                            window.location.href='index.html';
                         </script>
                     ";
                 }
@@ -25,7 +25,7 @@
                     echo"
                         <script>
                             alert('cannot run query');
-                            window.location.href='index.php';
+                            window.location.href='index.html';
                         </script>
                     ";
                 }
@@ -34,7 +34,7 @@
                 echo"
                     <script>
                         alert('Email already registered');
-                        window.location.href='index.php';
+                        window.location.href='index.html';
                     </script>
                 ";
             }
@@ -44,7 +44,7 @@
         echo"
             <script>
                 alert('cannot run query');
-                window.location.href='index.php';
+                window.location.href='index.html';
             </script>
         ";
     }
